@@ -3,11 +3,1210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    background: rgba(28, 30, 83, 1);
+    padding: 10px;
+}
+nav{
+    width: 80%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.ul1{
+    display: flex;
+    align-items:center;
+}
+.ul1 li {
+    list-style: none;
+    padding: 0 10px;
+}
+.ul1 li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px auto;
+}
+button{
+    width: 185px;
+    height:60px;
+    border: none;
+    border-radius: 41px;
+    border: 2px solid rgba(244, 246, 252, 0.2);
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+}
+h1{
+    color: white;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+
+  .how-we-work {
+    background-color: #f9f9f9;
+    padding: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .how-we-work-left {
+    max-width: 40%;
+  }
+
+  .how-we-work-left h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .how-we-work-left p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+  }
+
+  .how-we-work-left a {
+    font-size: 16px;
+    color: #5764f2;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .how-we-work-left a:hover {
+    text-decoration: underline;
+  }
+
+  .how-we-work-left a::after {
+    content: "→";
+    margin-left: 5px;
+    transition: margin-left 0.3s ease;
+  }
+
+  .how-we-work-left a:hover::after {
+    margin-left: 10px;
+  }
+
+  .how-we-work-right {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 55%;
+  }
+
+  .work-step {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    margin: 10px;
+    width: 38%;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .work-step h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .work-step p {
+    font-size: 14px;
+    color: #777;
+  }
+
+  .work-step .step-number {
+    background-color: #5764f2;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .how-we-work {
+      flex-direction: column;
+    }
+    .how-we-work-left,
+    .how-we-work-right {
+      max-width: 100%;
+    }
+    .work-step {
+      width: 100%;
+    }
+  }
+.b1{
+    display: none;
+    width: rgba(255, 255, 255, 0);
+}
+@media (max-width: 899px) {
+    nav{
+        width: 100%;
+    }
+    .ul1{
+        display: none;
+    }
+    .b1{
+        font-size: 50px;
+        color: white;
+        display:flex;
+    }
+}
+.c1{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 100px auto ;
+}
+.blog1{
+    width: 500px;
+    height: auto;
+    margin: 30px 0;
+}
+.blog1 h1{
+    font-size: 54px;
+}
+.blog1 p{
+    margin: 30px 0;
+    color: white;
+}
+a{
+    color: white;
+}
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+
+  .section-projects {
+    text-align: center;
+  }
+
+  .section-projects h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .section-projects a.view-more {
+    font-size: 16px;
+    color: #5764f2;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+
+  .section-projects a.view-more::after {
+    content: "→";
+    margin-left: 5px;
+    transition: margin-left 0.3s ease;
+  }
+
+  .section-projects a.view-more:hover::after {
+    margin-left: 10px;
+  }
+
+  .grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+  }
+
+  .card-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .content-detail {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+  }
+
+  .content-detail h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .content-detail p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .content-detail a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .content-detail a::after {
+    content: "→";
+    margin-left: 5px;
+    transition: margin-left 0.3s ease;
+  }
+
+  .content-detail a:hover::after {
+    margin-left: 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .grid-gallery {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+  .container3 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+
+  .section-features {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .section-features h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .section-features p {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 40px;
+  }
+
+  .grid-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .card-feature {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  .card-feature i {
+    font-size: 40px;
+    color: #5764f2;
+    margin-bottom: 20px;
+  }
+
+  .card-feature h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .card-feature p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .grid-features {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid-features {
+      grid-template-columns: 1fr;
+    }
+  }
+  .inquiry-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.inquiry__container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.inquiry__content {
+    flex: 1;
+    background-image: url('./woman-writing-on-paper-3228878.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: #fff;
+}
+
+.inquiry__title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.inquiry__description {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Form Section */
+.inquiry__form-container {
+    flex: 1;
+    background-color: #2c2f48;
+    color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inquiry__form-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.inquiry__form-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.inquiry__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.inquiry__input {
+    padding: 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+}
+
+.inquiry__button {
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #f0c05a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.inquiry__button:hover {
+    background-color: #e6a91d;
+}
+
+.inquiry__link {
+    text-decoration: none;
+    color: #f0c05a;
+    font-size: 14px;
+    align-self: flex-start;
+}
+
+.inquiry__link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .inquiry__container {
+        flex-direction: column;
+    }
+
+    .inquiry__content {
+        padding: 30px;
+    }
+
+    .inquiry__form-container {
+        padding: 30px;
+    }
+}
+.blog-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.blog-section h1 {
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.blog-card {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 1 1 calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: calc(33.333% - 20px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-info {
+  padding: 20px;
+}
+
+.date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.blog-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.excerpt {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .blog-card {
+      flex: 1 1 100%;
+      max-width: 100%;
+  }
+}
+.footer {
+  background-color: #2D2D5D;
+  color: white;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+  min-width: 250px;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.footer-left h2, .footer-right h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.footer-left p, .footer-right p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  gap: 20px;
+  background-color: #E5C47D;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.email-box, .call-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-box p, .call-box p {
+  margin-bottom: 5px;
+}
+.footer-nav a{
+ color: white;
+}
+.social-icons a {
+  color: white;
+  margin-right: 15px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  margin-left: 10px;
+  color:white;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: #E5C47D;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+  .footer-bottom {
+      flex-direction: column;
+  }
+  .footer-nav {
+      margin-top: 10px;
+  }
+}
+.faq-section {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin: 50px 0;
+}
+
+.faq-left {
+  flex: 1;
+}
+
+.faq-left h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.faq-left a {
+  color: #4A3AFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.faq-right {
+  flex: 2;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question span {
+  color: #4A3AFF;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.faq-question p {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.faq-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #4A3AFF;
+  font-weight: bold;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-section {
+      flex-direction: column;
+  }
+
+  .faq-left, .faq-right {
+      flex: 1;
+  }
+}
+.div7{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.div8{
+  width: 700px;
+  height: 600px;
+  background-image:url(./Card.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.div9{
+  width:458px;
+  height: 600px;
+}
+.div10{
+  width: 100%;
+  height:300px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.main-wrapper {
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.client-feedback,
+.client-testimonial {
+  width: 48%;
+}
+
+.client-feedback h1,
+.client-testimonial h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color:black;
+}
+
+.client-feedback p {
+  font-size: 16px;
+  color: #555;
+}
+
+.client-profile {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.client-profile img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.client-profile span {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .client-feedback,
+  .client-testimonial {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .client-profile {
+      justify-content: center;
+  }
+}
+.c11{
+  width: 90%;
+  height: auto;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.div11{
+  width: auto;
+  height: auto;
+
+}
+@media (max-width:1347) {
+  .div12{
+    justify-content: center;
+  }
+}
+@media (max-width: 1184px) {
+  .c11{
+    justify-content: center;
+    margin: 50px auto;
+  }
+  .div11{
+    margin: 20px 0;
+  }
+  .div12{
+    justify-content: center;
+  }
+}
+.c12{
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  background: #F4F5F5;
+  flex-wrap: wrap;
+}
+.div12{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  
+}
+.div13{
+  width: 500px;
+  height: 200px;
+}
+.div14{
+  width: 100%;
+  height:340px;
+  background-image:url(./man-in-blue-jacket-looking-at-white-board-7413916.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+.c13{
+  width: 90%;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
+}
+.div15{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.div16{
+  width: 276px;
+  height: auto;
+}
+@media (max-width: 1272px) {
+  .div15{
+    justify-content: center;
+  }
+  .div16{
+    margin: 20px auto;
+  }
+}
+.c15{
+  width: 90%;
+  height: auto;
+  padding: 20px;
+  margin: 50px auto;
+  background-color:#EEF4FA;
+}
+@media (max-width: 1403px) {
+  .div16{
+    margin: 20px auto;
+  }
+}
+.c17{
+  width: 100%;
+  height: auto;
+  background-color:#EEF4FA;
+  margin: 50px auto;
+}
+    h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.description {
+    text-align: center;
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.highlight {
+    background-color: #1a1e61;
+    color: #fff;
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card h3 span {
+    font-size: 1rem;
+    color: #888;
+}
+
+.card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.card ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.card ul li.disabled {
+    color: #ccc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn.primary {
+    background-color: #f7be47;
+    color: #1a1e61;
+}
+
+.highlight .btn.primary {
+    background-color: #ffdb70;
+}
+
+.highlight .btn.primary:hover {
+    background-color: #ffca43;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.card.highlight {
+    transform: scale(1.05);
+}
+</style>
 <body>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel purus vel ipsum gravida tincidunt. Sed vel ipsum gravida, ullamcorper felis sed, fringilla nunc. Nulla facilisi. Sed ut felis vel dui semper congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed euismod est vel felis gravida, ac viverra sem placerat. Nullam vel ligula vel eros dictum consectetur. Nulla facilisi.
-    </p>
+    <header>
+        <nav>
+            <h1 style="color: white;">{Finsweet</h1>
+            <i class='bx bx-menu b1'></i>
+            <ul class="ul1">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./in.html">About us</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Blog</a></li>
+                <button>Contact us</button>
+            </ul>
+        </nav>
+    </header>
+    <section style="margin: 100px 0;" class="pricing">
+        <h2>Our Pricing Plans</h2>
+        <p class="description">When you're ready to go beyond prototyping in Figma, Webflow is ready to help you bring your designs to life — without coding them.</p>
+
+        <div class="pricing-cards">
+            <!-- Landing Page Plan -->
+            <div class="card">
+                <h3>$299 <span>Per Design</span></h3>
+                <h4>Landing Page</h4>
+                <p>When you're ready to go beyond prototyping in Figma,</p>
+                <ul>
+                    <li>All limited links</li>
+                    <li>Own analytics platform</li>
+                    <li>Chat support</li>
+                    <li class="disabled">Optimize hashtags</li>
+                    <li class="disabled">Unlimited users</li>
+                </ul>
+                <a href="#" class="btn">Get started</a>
+            </div>
+
+            <!-- Website Page Plan -->
+            <div class="card highlight">
+                <h3>$399 <span>Multi Design</span></h3>
+                <h4>Website Page</h4>
+                <p>When you're ready to go beyond prototyping in Figma, Webflow's ready to help.</p>
+                <ul>
+                    <li>All limited links</li>
+                    <li>Own analytics platform</li>
+                    <li>Chat support</li>
+                    <li>Optimize hashtags</li>
+                    <li>Unlimited users</li>
+                </ul>
+                <a href="#" class="btn primary">Get started</a>
+            </div>
+
+            <!-- Complex Project Plan -->
+            <div class="card">
+                <h3>$499+ <span>Per Design</span></h3>
+                <h4>Complex Project</h4>
+                <p>When you're ready to go beyond prototyping in Figma,</p>
+                <ul>
+                    <li>All limited links</li>
+                    <li>Own analytics platform</li>
+                    <li>Chat support</li>
+                    <li>Optimize hashtags</li>
+                    <li>Unlimited users</li>
+                    <li>Assist and Help</li>
+                </ul>
+                <a href="#" class="btn">Contact us</a>
+            </div>
+        </div>
+    </section>
+    <section style="margin: 50px auto;" class="faq-section">
+        <div class="faq-left">
+            <h2>Frequently asked questions</h2>
+            <p><a href="#">Contact us for more info</a></p>
+        </div>
+        <div class="faq-right">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>01</span>
+                    <p>How much time does it take?</p>
+                    <button class="faq-toggle">×</button>
+                </div>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>02</span>
+                    <p>What is your class naming convention?</p>
+                    <button class="faq-toggle">+</button>
+                </div>
+                <div class="faq-answer">
+                    <p>Your answer goes here.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>03</span>
+                    <p>How do you communicate?</p>
+                    <button class="faq-toggle">+</button>
+                </div>
+                <div class="faq-answer">
+                    <p>Your answer goes here.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>04</span>
+                    <p>I have a bigger project. Can you handle it?</p>
+                    <button class="faq-toggle">+</button>
+                </div>
+                <div class="faq-answer">
+                    <p>Your answer goes here.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>05</span>
+                    <p>What is your class naming convention?</p>
+                    <button class="faq-toggle">+</button>
+                </div>
+                <div class="faq-answer">
+                    <p>Your answer goes here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h2>Finsweet</h2>
+            <p>We are always open to discuss your project and improve your online presence.</p>
+            <div class="contact-info">
+                <div class="email-box">
+                    <p>Email me at</p>
+                    <p>contact@website.com</p>
+                </div>
+                <div class="call-box">
+                    <p>Call us</p>
+                    <p>0927 6277 28525</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h2>Lets Talk!</h2>
+            <p>We are always open to discuss your project, improve your online presence and help with your UX/UI design challenges.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>Copyright 2022, Finsweet.com</p>
+        <nav class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">FAQ</a>
+            <a href="#">Blog</a>
+        </nav>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+          const answer = item.querySelector('.faq-answer');
+          const button = item.querySelector('.faq-toggle');
+  
+          if (answer.style.display === 'block') {
+              answer.style.display = 'none';
+              button.textContent = '+';
+          } else {
+              answer.style.display = 'block';
+              button.textContent = '×';
+          }
+      });
+  });
+  
+  </script>
 </body>
 </html>
