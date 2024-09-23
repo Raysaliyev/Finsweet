@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>{Finsweet</h1>
+            <i class='bx bx-menu b1'></i>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./in.html">About us</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Blog</a></li>
+                <button>Contact us</button>
+            </ul>
+        </nav>
+    </header>
+    <div class="div18">
+        <div class="div20">
+            <p style="margin: 10px 0;">What we created</p>
+        <h1 style="color: black ; margin: 10px 0;">Our Work Portfolio</h1>
+        <p style="margin: 10px 0;">We help teams create great digital products by providing them with tools and technology <br> to make the design-to-code process universally accessible.</p>
+        <div class="div19">
+            <i class='bx bxl-facebook-square'></i>
+            <i class='bx bxl-twitter'></i>
+            <i class='bx bxl-instagram' ></i>
+            <i class='bx bxl-linkedin-square' ></i>
+        </div>
+        </div>
+    </div>
+    <div class="div17">
+        <ul>
+            <li>All</li>
+            <li>UI Design</li>
+            <li>Webflow Design</li>
+            <li>Figma Design</li>
+        </ul>
+    </div>
+    <section class="portfolio">
+        <div class="template">
+            <img src="./Image.png" alt="Template 1">
+            <h3>Template 1</h3>
+            <p>Apparently we had reached a great height in the atmosphere...</p>
+            <a href="#">View Portfolio</a>
+        </div>
+        <div class="template">
+            <img src="./7.png" alt="Template 2">
+            <h3>Template 2</h3>
+            <p>Apparently we had reached a great height in the atmosphere...</p>
+            <a href="#">View Portfolio</a>
+        </div>
+        <div class="template">
+            <img src="./8.png" alt="Template 3">
+            <h3>Template 3</h3>
+            <p>Apparently we had reached a great height in the atmosphere...</p>
+            <a href="#">Read Case Study</a>
+        </div>
+        <div class="template">
+            <img src="./Card.png" alt="Template 4">
+            <h3>Template 4</h3>
+            <p>Apparently we had reached a great height in the atmosphere...</p>
+            <a href="#">Read Case Study</a>
+        </div>
+        <div class="template">
+            <img src="./3.png" alt="Template 5">
+            <h3>Template 5</h3>
+            <p>Apparently we had reached a great height in the atmosphere...</p>
+            <a href="#">Read Case Study</a>
+        </div>
+        <div class="template">
+            <img src="./4.png" alt="Template 6">
+            <h3>Template 6</h3>
+            <p>Apparently we had reached a great height in the atmosphere...</p>
+            <a href="#">Read Case Study</a>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Let's build something great together</h2>
+        <p>Nullam vitae purus at tortor mattis dapibus...</p>
+        <a href="#" class="btn">Contact Us</a>
+    </section>
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h2>Finsweet</h2>
+            <p>We are always open to discuss your project and improve your online presence.</p>
+            <div class="contact-info">
+                <div class="email-box">
+                    <p>Email me at</p>
+                    <p>contact@website.com</p>
+                </div>
+                <div class="call-box">
+                    <p>Call us</p>
+                    <p>0927 6277 28525</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h2>Lets Talk!</h2>
+            <p>We are always open to discuss your project, improve your online presence and help with your UX/UI design challenges.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>Copyright 2022, Finsweet.com</p>
+        <nav class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">FAQ</a>
+            <a href="#">Blog</a>
+        </nav>
+    </div>
+</footer>
+<script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        const button = item.querySelector('.faq-toggle');
+
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+            button.textContent = '+';
+        } else {
+            answer.style.display = 'block';
+            button.textContent = '×';
+        }
+    });
+});
+
+</script>
+</body>
+</html>
